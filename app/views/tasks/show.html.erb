@@ -12,7 +12,21 @@
 
 <p>
   <strong>Job:</strong>
-  <%= @task.job %>
+  <%= @task.job.name %>
+</p>
+
+<p>
+  <strong>Completion:</strong>
+  <%= if @task.complete
+        "Complete"
+      else
+        "Incomplete"
+      end %>
+</p>
+
+<p>
+  <strong>Hours Worked:</strong>
+  <%= @task.hours_worked %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |

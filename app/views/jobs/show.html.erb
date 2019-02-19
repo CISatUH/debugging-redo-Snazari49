@@ -5,5 +5,22 @@
   <%= @job.name %>
 </p>
 
+
+<p>
+  <strong>Location:</strong>
+  <%= @job.location %>
+</p>
+
+
+<p>
+  <strong>Completion:</strong>
+  <%= if @job.complete
+        "Complete"
+      else
+        "Incomplete"
+      end %>
+</p>
+
+
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>
